@@ -6,11 +6,9 @@ def test():
     gestor = GV()
     gestor.leerArchivo()
     print(gestor)
-    print('\nPUNTO 21')
+    print('\nPUNTO 2')
     menu= Menu()
     menu.opciones(gestor)
-    print('\nPUNTO 3\n')
-    gestor.obtenerMemoria()
 
 if __name__ == '__main__':
     test()

@@ -18,25 +18,21 @@ class MenuOpciones:
                 print('\nInciso a')
                 viajero=listaV.buscarViajero(int(input('Ingrese numero de viajero frecuente: ')))
                 if viajero!=None:
-                    print(viajero.cantidadMillas())
+                    listaV.cantMillas(viajero)
                 else:
                     print('El viajero no se encontro')
             elif self.__opcion == 2:
                 print('\nInciso b')
                 viajero=listaV.buscarViajero(int(input('Ingrese numero de viajero frecuente: ')))
                 if viajero!=None:
-                    print(viajero.acumularMillas(int(input('Ingrese cantidad de millas a acumular: '))))
+                    listaV.acumMillas(viajero)
                 else:
                     print('El viajero no se encontro')
             elif self.__opcion == 3:
                 print('\nInciso c')
                 viajero=listaV.buscarViajero(int(input('Ingrese numero de viajero frecuente: ')))
                 if viajero!=None:
-                    cant=int(input('Ingrese cantidad de millas a canjear: '))
-                    if cant<=viajero.cantidadMillas():
-                        print('Nueva cantidad de millas acumuladas: %s'%viajero.canjearMillas(cant))
-                    else:
-                        print('Las millas no son suficientes para realizar el canje')
+                    listaV.canjearMillas(viajero)
                 else:
                     print('El viajero no se encontro')
             

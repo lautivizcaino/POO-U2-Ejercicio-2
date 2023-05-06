@@ -20,13 +20,21 @@ class GestorViajeros:
             UnViajero= ViajeroFrecuente(num_viajero,dni,nombre,apellido,millas_acum)
             self.agregarViajero(UnViajero)
         File.close()
-    def obtenerMemoria(self):
-        for p in self.__listaViajeros:
-            print ('Direccion de memoria de {}: {}'.format(p,hex(id(p))))
     def buscarViajero(self,viajero):
         for v in self.__listaViajeros:
             if v.getNum()==viajero:
                 return v
+    def cantMillas(self,viajero):
+        print('Cantidad de millas: %d'%viajero.getMillas())
+    def acumMillas(self,viajero):
+        millas=int(input('Ingrese cantidad de millas a acumular: '))
+        print(viajero.acumularMillas(millas))
+    def canjearMillas(self,viajero):
+        cant=int(input('Ingrese cantidad de millas a canjear: '))
+        if cant<=viajero.getMillas():
+            print('Nueva cantidad de millas acumuladas: %s'%viajero.canjMillas(cant))
+        else:
+            print('Las millas no son suficientes para realizar el canje')
     def __str__(self):
         v=''
         for viajero in self.__listaViajeros:

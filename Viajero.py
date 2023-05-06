@@ -13,12 +13,12 @@ class ViajeroFrecuente:
         self.__millas_acum = millas_acum
     def getNum(self):
         return self.__num_viajero
-    def cantidadMillas(self):
+    def getMillas(self):
         return self.__millas_acum
     def acumularMillas(self,millas):
         self.__millas_acum+=millas
         return self.__millas_acum
-    def canjearMillas(self,millas):
+    def canjMillas(self,millas):
         self.__millas_acum-=millas
         return self.__millas_acum
     def __str__(self):
